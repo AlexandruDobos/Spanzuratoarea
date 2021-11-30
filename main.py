@@ -2,8 +2,8 @@ import random
 
 numberOfChances = 0
 continueGame = True
-semaphore = False
 categories = ['MANCARE', 'SPORT', 'TARI']
+
 
 def Initialize():
     while True:
@@ -42,13 +42,30 @@ def UserContinueGame():
 def ChooseRandomWord(words):
     global numberOfChances
     word = words[random.randint(0, len(words) - 1)]
-    print(f"Cuvantul ales: {word}. Lungimea cuvantului ales: {len(word)}")
+    # print(f"Cuvantul ales: {word}. Lungimea cuvantului ales: {len(word)}")
     return word
 
 
 def SetNumberOfChances(word):
     global numberOfChances
     numberOfChances = len(word)
+
+
+def WriteInFile(text):
+    file = open('results\\output.txt', 'a')
+    file.write(text)
+    file.close()
+
+
+def BuildText(word, mistakes, numberOfChances):
+    text = "Cuvant de ghicit: "
+    text += str(''.join(word))
+    text += " | Numar de incercari disponibile pentru acest cuvant: "
+    text += str(numberOfChances)
+    text += " | Numar de incercari esuate pentru acest cuvant: "
+    text += str(mistakes)
+    text += "\n"
+    return text
 
 
 def Game():
@@ -63,6 +80,7 @@ def Game():
         print(f"Jocul incepe. Ai {numberOfChances} incercari.\n")
 
         guessWord = list("_" * len(word))
+        mistakes = 0
         copyNumberOfChances = numberOfChances
         while numberOfChances > 0:
             print(*guessWord, "\n")
@@ -77,12 +95,21 @@ def Game():
                                 guessWord[position] = userLetterInput
             else:
                 numberOfChances = numberOfChances - 1
+                mistakes = mistakes + 1
             if guessWord == word:
-                print("Felicitari, ai castigat.\n")
-                print(f"Cuvantul a fost {''.join(word)}. Ai gresit de {copyNumberOfChances - numberOfChances} ori in incercarea de a ghici cuvantul.")
+                print(*word)
+                print("Felicitari, ai ghicit cuvantul!\n")
+                text = BuildText(word, mistakes, copyNumberOfChances)
+                WriteInFile(text)
                 numberOfChances = 0
-            else:
+            elif numberOfChances != 0:
                 print(f"\nMai ai {numberOfChances} incercari. \n")
+                mistakes = mistakes + 1
+            else:
+                print(f"\nAi pierdut! Cuvantul ce trebuia ghicit era {''.join(word)}.\n")
+                mistakes = mistakes + 1
+                text = BuildText(word, mistakes, copyNumberOfChances)
+                WriteInFile(text)
         if not UserContinueGame():
             continueGame = False
 
