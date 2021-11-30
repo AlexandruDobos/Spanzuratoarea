@@ -5,26 +5,18 @@ continueGame = True
 semaphore = False
 categories = ['MANCARE', 'SPORT', 'TARI']
 
-
 def Initialize():
-    print("-----   Introdu categoria [ 0 -", len(categories) - 1, "]   -----")
     while True:
-        try:
-            for i in range(0, len(categories)):
-                print(f"[{i}] {categories[i]}")
-            userInput = int(input("Ce categorie alegi?: "))
-        except ValueError:
-            print("Introdu o valoare corecta din cele prezentate.")
-            continue
+        print(f"Introdu categoria: {' | '.join(categories)}")
+        userInput = input()
+        if userInput.upper() in categories:
+            return userInput
         else:
-            if 0 <= userInput < len(categories):
-                return int(userInput)
-            else:
-                print("--- !!! Introdu o valoare corecta din cele prezentate !!! ---")
+            print("!!! Introdu o categorie corecta !!!")
 
 
 def OpenFile(index):
-    name = "categories\\" + categories[index]
+    name = "categories\\" + index
     file = open(name, 'r')
     lines = []
     for readLine in file:
@@ -64,13 +56,14 @@ def Game():
     global numberOfChances
     while continueGame:
         category = Initialize()
-        print("Categoria aleasa:", categories[category])
+        print("Categoria aleasa:", category)
         words = OpenFile(category)
         word = list(ChooseRandomWord(words))
         SetNumberOfChances(word)
         print(f"Jocul incepe. Ai {numberOfChances} incercari.\n")
 
         guessWord = list("_" * len(word))
+        copyNumberOfChances = numberOfChances
         while numberOfChances > 0:
             print(*guessWord, "\n")
             userLetterInput = input("Introdu o litera: ").upper()
@@ -79,13 +72,14 @@ def Game():
                     if userLetterInput not in word:
                         numberOfChances = numberOfChances - 1
                     else:
-                        for pos, char in enumerate(word):
-                            if char == userLetterInput:
-                                guessWord[pos] = userLetterInput
+                        for position, character in enumerate(word):
+                            if character == userLetterInput:
+                                guessWord[position] = userLetterInput
             else:
                 numberOfChances = numberOfChances - 1
             if guessWord == word:
                 print("Felicitari, ai castigat.\n")
+                print(f"Cuvantul a fost {''.join(word)}. Ai gresit de {copyNumberOfChances - numberOfChances} ori in incercarea de a ghici cuvantul.")
                 numberOfChances = 0
             else:
                 print(f"\nMai ai {numberOfChances} incercari. \n")
