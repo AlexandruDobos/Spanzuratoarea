@@ -1,2 +1,9 @@
 Cuvant de ghicit: BOX | Numar de incercari disponibile pentru acest cuvant: 3 | Numar de incercari esuate pentru acest cuvant: 3
 Cuvant de ghicit: ROMANIA | Numar de incercari disponibile pentru acest cuvant: 7 | Numar de incercari esuate pentru acest cuvant: 7
+Cuvant de ghicit: VOLEI | Numar de incercari disponibile pentru acest cuvant: 5 | Numar de incercari esuate pentru acest cuvant: 8
+Cuvant de ghicit: FUTSAL | Numar de incercari disponibile pentru acest cuvant: 6 | Numar de incercari esuate pentru acest cuvant: 6
+Cuvant de ghicit: BADMINTON | Numar de incercari disponibile pentru acest cuvant: 9 | Numar de incercari esuate pentru acest cuvant: 9
+Cuvant de ghicit: FOTBAL | Numar de incercari disponibile pentru acest cuvant: 6 | Numar de incercari esuate pentru acest cuvant: 7
+Cuvant de ghicit: CICLISM | Numar de incercari disponibile pentru acest cuvant: 7 | Numar de incercari esuate pentru acest cuvant: 7
+Cuvant de ghicit: ESPORTS | Numar de incercari disponibile pentru acest cuvant: 7 | Numar de incercari esuate pentru acest cuvant: 7
+Cuvant de ghicit: PORTUGALIA | Numar de incercari disponibile pentru acest cuvant: 10 | Numar de incercari esuate pentru acest cuvant: 10

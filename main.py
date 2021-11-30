@@ -95,7 +95,6 @@ def Game():
                                 guessWord[position] = userLetterInput
             else:
                 numberOfChances = numberOfChances - 1
-                mistakes = mistakes + 1
             if guessWord == word:
                 print(*word)
                 print("Felicitari, ai ghicit cuvantul!\n")
