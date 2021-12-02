@@ -42,7 +42,7 @@ def UserContinueGame():
 def ChooseRandomWord(words):
     global numberOfChances
     word = words[random.randint(0, len(words) - 1)]
-    print(f"Cuvantul ales: {word}. Lungimea cuvantului ales: {len(word)}")
+    # print(f"Cuvantul ales: {word}. Lungimea cuvantului ales: {len(word)}")
     return word
 
 
@@ -57,8 +57,9 @@ def WriteInFile(text):
     file.close()
 
 
-def BuildText(word, mistakes, numberOfChances):
-    text = "Cuvant de ghicit: "
+def BuildText(category, word, mistakes, numberOfChances):
+    text = f"Categoria cuvantului: {category.upper()} | "
+    text += "Cuvant de ghicit: "
     text += str(''.join(word))
     text += " | Numar de incercari disponibile pentru acest cuvant: "
     text += str(numberOfChances)
@@ -98,7 +99,7 @@ def Game():
             if guessWord == word:
                 print(*word)
                 print("Felicitari, ai ghicit cuvantul!\n")
-                text = BuildText(word, mistakes, copyNumberOfChances)
+                text = BuildText(category, word, mistakes, copyNumberOfChances)
                 WriteInFile(text)
                 numberOfChances = 0
             elif numberOfChances != 0:
@@ -108,7 +109,7 @@ def Game():
             else:
                 print(f"\nAi pierdut! Cuvantul ce trebuia ghicit era {''.join(word)}.\n")
                 mistakes = mistakes + 1
-                text = BuildText(word, mistakes, copyNumberOfChances)
+                text = BuildText(category, word, mistakes, copyNumberOfChances)
                 WriteInFile(text)
         if not UserContinueGame():
             continueGame = False
