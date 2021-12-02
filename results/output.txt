@@ -7,3 +7,13 @@ Cuvant de ghicit: FOTBAL | Numar de incercari disponibile pentru acest cuvant: 6
 Cuvant de ghicit: CICLISM | Numar de incercari disponibile pentru acest cuvant: 7 | Numar de incercari esuate pentru acest cuvant: 7
 Cuvant de ghicit: ESPORTS | Numar de incercari disponibile pentru acest cuvant: 7 | Numar de incercari esuate pentru acest cuvant: 7
 Cuvant de ghicit: PORTUGALIA | Numar de incercari disponibile pentru acest cuvant: 10 | Numar de incercari esuate pentru acest cuvant: 10
+Cuvant de ghicit: COTLET | Numar de incercari disponibile pentru acest cuvant: 6 | Numar de incercari esuate pentru acest cuvant: 8
+Cuvant de ghicit: CASCAVAL | Numar de incercari disponibile pentru acest cuvant: 8 | Numar de incercari esuate pentru acest cuvant: 10
+Cuvant de ghicit: TENIS | Numar de incercari disponibile pentru acest cuvant: 5 | Numar de incercari esuate pentru acest cuvant: 5
+Cuvant de ghicit: GOLF | Numar de incercari disponibile pentru acest cuvant: 4 | Numar de incercari esuate pentru acest cuvant: 4
+Cuvant de ghicit: MIC | Numar de incercari disponibile pentru acest cuvant: 3 | Numar de incercari esuate pentru acest cuvant: 3
+Cuvant de ghicit: ISRAEL | Numar de incercari disponibile pentru acest cuvant: 6 | Numar de incercari esuate pentru acest cuvant: 9
+Cuvant de ghicit: MOTORSPORT | Numar de incercari disponibile pentru acest cuvant: 10 | Numar de incercari esuate pentru acest cuvant: 11
+Cuvant de ghicit: BASCHET | Numar de incercari disponibile pentru acest cuvant: 7 | Numar de incercari esuate pentru acest cuvant: 0
+Cuvant de ghicit: FOTBAL | Numar de incercari disponibile pentru acest cuvant: 6 | Numar de incercari esuate pentru acest cuvant: 6
+Cuvant de ghicit: ESPORTS | Numar de incercari disponibile pentru acest cuvant: 7 | Numar de incercari esuate pentru acest cuvant: 1

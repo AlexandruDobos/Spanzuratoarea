@@ -42,7 +42,7 @@ def UserContinueGame():
 def ChooseRandomWord(words):
     global numberOfChances
     word = words[random.randint(0, len(words) - 1)]
-    # print(f"Cuvantul ales: {word}. Lungimea cuvantului ales: {len(word)}")
+    print(f"Cuvantul ales: {word}. Lungimea cuvantului ales: {len(word)}")
     return word
 
 
@@ -103,7 +103,8 @@ def Game():
                 numberOfChances = 0
             elif numberOfChances != 0:
                 print(f"\nMai ai {numberOfChances} incercari. \n")
-                mistakes = mistakes + 1
+                if userLetterInput not in guessWord:
+                    mistakes = mistakes + 1
             else:
                 print(f"\nAi pierdut! Cuvantul ce trebuia ghicit era {''.join(word)}.\n")
                 mistakes = mistakes + 1
